@@ -1,0 +1,27 @@
+{
+  "name": "slack-channel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node worker.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adryft-io/slack-channel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adryft-io/slack-channel/issues"
+  },
+  "homepage": "https://github.com/adryft-io/slack-channel#readme",
+  "dependencies": {
+    "aws-sdk": "^2.4.5",
+    "dotenv": "^2.0.0",
+    "request": "^2.72.0",
+    "sqs-consumer": "^3.2.0"
+  }
+}
