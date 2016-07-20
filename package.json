@@ -1,5 +1,5 @@
 {
-  "name": "slack-channel",
+  "name": "slackbot-channel",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,20 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adryft-io/slack-channel.git"
+    "url": "git+https://github.com/adryft-io/slackbot-channel.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adryft-io/slack-channel/issues"
+    "url": "https://github.com/adryft-io/slackbot-channel/issues"
   },
-  "homepage": "https://github.com/adryft-io/slack-channel#readme",
+  "homepage": "https://github.com/adryft-io/slackbot-channel#readme",
   "dependencies": {
     "aws-sdk": "^2.4.5",
     "botkit": "^0.2.2",
     "dotenv": "^2.0.0",
     "request": "^2.72.0",
-    "sqs-consumer": "^3.2.0"
+    "sqs-consumer": "^3.2.0",
+    "string-template": "^1.0.0"
   }
 }

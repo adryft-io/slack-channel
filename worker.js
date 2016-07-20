@@ -3,6 +3,7 @@ var Consumer = require('sqs-consumer');
 var AWS = require('aws-sdk');
 var request = require('request');
 var Botkit = require('botkit');
+var format = require('string-template');
 
 AWS.config.update({region: process.env.AWS_REGION});
 var sqs = new AWS.SQS();
@@ -10,12 +11,13 @@ var sqs = new AWS.SQS();
 var handleMessage = function(message, done) {
   var id = message.MessageId;
   var body = JSON.parse(message.Body);
+  var props = body.action_props || {};
   request.post('https://slack.com/api/chat.postMessage', {
     qs: {
       as_user: true,
       token: body.reaction_fields.token,
       channel: body.reaction_fields.channel,
-      text: body.reaction_fields.text
+      text: format(body.reaction_fields.text, props)
     }
   }, function (err, res, body) {
     if (err) {
