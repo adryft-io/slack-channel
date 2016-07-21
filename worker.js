@@ -28,7 +28,7 @@ var handleMessage = function(message, done) {
   });
 };
 
-sqs.getQueueUrl({ QueueName: 'slack-channel' }, function(err, data) {
+sqs.getQueueUrl({ QueueName: 'slackbot-channel' }, function(err, data) {
   if (err) return console.error(err);
 
   var app = Consumer.create({
